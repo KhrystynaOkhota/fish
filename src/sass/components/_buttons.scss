@@ -1,0 +1,90 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.btn {
+  position: relative;
+  box-shadow: none;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  border-radius: 0;
+  @include fontSize(14, 16);
+  padding: 20px;
+
+  //min-width: 174px;
+  text-align: center;
+  font-weight: 600;
+
+  @include transition(.3);
+
+  &:focus {
+    outline: none;
+  }
+
+  &-primary {
+    padding: 22.5px;
+    background: #E81010;
+    color: $whiteColor;
+    display: inline-block;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    &:hover {
+    }
+  }
+
+  &-more {
+    text-transform: uppercase;
+    color: #E81010;
+    padding-right: 16px;
+
+    & i {
+      @include fontSize(14, 16);
+      padding-left: 16px;
+    }
+  }
+
+  &-play {
+    width: 110px;
+    height: 110px;
+    z-index: 2;
+    border: 15px solid rgba(255, 255, 255, .5);
+    background-color: transparent;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    @media (max-width: $breakpoint-md) {
+      width: 66px;
+      height: 66px;
+      border: 0.64px solid #fff;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 1);
+      z-index: -1;
+
+    }
+
+    & img {
+      width: 35%;
+
+      object-fit: contain;
+    }
+  }
+}
+
+@keyframes pulse {
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
