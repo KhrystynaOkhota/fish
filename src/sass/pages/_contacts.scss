@@ -2,26 +2,41 @@
 @import "../abstracts/variables";
 
 .s-contacts {
-  &.mb-170 {
-    margin-bottom: 170px;
-    @media (max-width: $breakpoint-md) {
-      margin-bottom: 120px;
+  padding: 140px 0;
+  background: rgba(244, 244, 244, 1);
+
+  & .heading {
+    margin-bottom: 48px;
+  }
+
+  & .description {
+    margin-bottom: 32px;
+  }
+
+  & .social {
+    &__item {
+      a {
+        width: 32px;
+        height: 32px;
+        box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.12);
+        border-radius: 0;
+
+        & i {
+          color: rgba(15, 14, 104, 1);
+
+        }
+      }
     }
   }
 
-  &.--home {
-    padding: 90px 0 143px 0;
-    @media (max-width: $breakpoint-md) {
-      padding: 20px 0 109px 0;
+  & .contact {
+    &__wrap {
+      box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.06);
+      background: #FFFFFF;
+      padding: 32px;
     }
   }
 
-  &:not(&.--home) {
-    padding: 50px 0 60px 0;
-    @media (max-width: $breakpoint-md) {
-      padding: 35px 0 43px 0;
-    }
-  }
 
   & .contact {
     margin-bottom: 10px;
@@ -29,16 +44,6 @@
       margin-bottom: 20px;
     }
 
-    &__title {
-      font-size: 24px;
-
-      & span {
-        font-size: 18px;
-        font-weight: 300;
-        display: block;
-        width: 100%;
-      }
-    }
 
 
     & .img {
@@ -60,48 +65,6 @@
       }
     }
 
-  }
-
-  &__cta {
-    background-color: #D8D6D1;
-    padding: 20px 0;
-    position: relative;
-
-    &:after {
-      content: '';
-      width: 100vw;
-      background: #D8D6D1;
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-      margin-left: calc((-100vw + 100%) / 2);
-      z-index: -1;
-    }
-
-    @media (max-width: $breakpoint-md) {
-      padding: 12px 12px 0 12px;
-    }
-  }
-
-  &__map {
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    position: absolute !important;
-
-    &--wrap {
-      height: 395px;
-      border-radius: 10px;
-      overflow: hidden;
-      z-index: 1;
-    }
-  }
-
-  .map-info {
-    font-size: 24px;
-    text-align: center;
-    min-width: 250px;
   }
 }
 
@@ -147,16 +110,18 @@
     &__wrap {
       position: absolute;
       top: 0;
-      left: 0;
+      right: 0;
       height: 100%;
-      width: 100%;
+      width: 55%;
       z-index: -1;
 
       &:after {
         content: "";
-        width: 70%;
+        width: 100%;
         height: 100%;
-        background: linear-gradient(90deg, rgba(244, 244, 244, 0) 0%, #8E8E8E 100%);
+        // background: linear-gradient(90deg, rgba(244, 244, 244, 0) 0%, #8E8E8E 100%);
+
+        background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
         position: absolute;
         top: 0;
         left: 0;

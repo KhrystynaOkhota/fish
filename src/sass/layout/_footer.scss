@@ -85,7 +85,7 @@
         margin-top: 32px;
       }
 
-      & i {
+      & > i {
         font-size: 24px;
         color: rgba(232, 16, 16, 1);
         padding-right: 12px;
@@ -182,6 +182,7 @@
 
     &__link {
       padding-left: 10px;
+
       & img {
         width: 75px;
         height: 15px;

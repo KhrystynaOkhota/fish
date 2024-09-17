@@ -37,9 +37,11 @@
   &__wrap {
 
     position: relative;
-    padding-bottom: 62%;
+    padding-bottom: 42%;
     overflow: hidden;
-    border-radius: 10px;
+    @media (max-width: $breakpoint-md) {
+      padding-bottom: 130%;
+    }
 
     & video {
       width: 100%;
@@ -74,83 +76,34 @@
 .s-img-text {
   & .img {
     &__wrap {
-      border-radius: 10px;
       overflow: hidden;
       @media (max-width: $breakpoint-md) {
-        margin-bottom: 25px;
+        margin-bottom: 16px;
       }
     }
   }
 
-  &__item {
-    &:nth-child(odd) {
-      padding: 38px 0;
-      @media (max-width: $breakpoint-md) {
-        padding: 28px 0 35px 0;
-      }
-
-
-    }
-
-    &:nth-child(even) {
+  &__inner {
+    @media (min-width: $breakpoint-md) {
       flex-direction: row-reverse;
-      padding: 82px 0;
-      @media (max-width: $breakpoint-md) {
-        padding: 35px 0;
-      }
-
-      &:after {
-        content: '';
-        width: 100vw;
-        height: 100%;
-        background: linear-gradient(81.5deg, #FFFFFF 21.75%, #E9EAEE 54.83%, #FFFFFF 82.21%);
-
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin-left: calc((-100vw + 100%) / 2);
-        z-index: -1;
-      }
     }
   }
+
 }
 
 .s-video {
 
-  &.home{
-    .preload{
-      &__wrap{
+  &.home {
+    margin-bottom: 140px;
+
+    .preload {
+      &__wrap {
         padding-bottom: 30%;
         max-height: calc(40vh - 152px);
       }
     }
   }
-  &__item {
-    &:nth-child(odd) {
-      padding: 82px 0;
-      @media (max-width: $breakpoint-md) {
-        padding: 28px 0 35px 0;
-      }
 
-      &:after {
-        content: '';
-        width: 100vw;
-        height: 100%;
-        background: linear-gradient(81.5deg, #FFFFFF 21.75%, #E9EAEE 54.83%, #FFFFFF 82.21%);
-
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin-left: calc((-100vw + 100%) / 2);
-        z-index: -1;
-      }
-    }
-
-    &:nth-child(even) {
-      flex-direction: row-reverse;
-      padding: 38px 0;
-    }
-  }
 
   & .btn-pulse {
     bottom: 50px;
@@ -244,7 +197,6 @@
 }
 
 
-
 .s-image {
   & .img {
     position: absolute;
@@ -261,6 +213,23 @@
   }
 }
 
-.s-text{
+.s-text {
 
+}
+
+.s-img {
+  & .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    &__wrap {
+      position: relative;
+      padding-bottom: 36%;
+      min-height: 480px;
+    }
+  }
 }
