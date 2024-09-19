@@ -93,6 +93,27 @@
     padding: 15px 0;
   }
 
+  &__inner {
+    margin-top: 48px;
+    @media (min-width: $breakpoint-md) {
+      flex-direction: row-reverse;
+    }
+    @media (max-width: $breakpoint-md) {
+      margin-top: 32px;
+    }
+  }
+
+  & .heading {
+    @media (max-width: $breakpoint-md) {
+      text-align: center;
+    }
+  }
+
+  & .btn-transparent {
+    width: 380px;
+
+  }
+
   & .decor {
     position: absolute;
     bottom: 60px;
@@ -105,6 +126,7 @@
     &__wrap {
       display: grid;
       grid-template-columns: 1fr;
+      height: calc(100% - 20px);
       @media (max-width: $breakpoint-md) {
         grid-template-columns: repeat(1, 1fr);
       }
@@ -126,7 +148,16 @@
     }
 
     &__title {
+      @include fontSize(16, 20);
+      margin-bottom: 12px;
+    }
 
+    &__description {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
     }
 
     &__img {
@@ -141,6 +172,10 @@
         padding-bottom: 62%;
         min-height: 100%;
       }
+    }
+
+    &__more {
+      margin-top: 48px;
     }
   }
 

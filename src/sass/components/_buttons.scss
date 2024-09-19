@@ -51,6 +51,19 @@
     }
   }
 
+  &-transparent {
+    @include fontSize(14, 18);
+    color: #E81010;
+    border: 1px solid #E81010;
+    padding: 21.5px;
+
+    & i {
+      padding-left: 16px;
+      @include fontSize(14, 16);
+      @include transition(.4);
+    }
+  }
+
   &-play {
     width: 280px;
     height: 280px;
