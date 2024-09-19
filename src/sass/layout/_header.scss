@@ -37,6 +37,17 @@
     &__current {
       position: relative;
       cursor: pointer;
+      padding-left: 26px;
+      &:before{
+      content: '';
+        width: 18px;
+        height: 18px;
+        background: url("../img/web.svg") center no-repeat;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
 
       & a, & i {
         font-weight: 400;
@@ -83,8 +94,8 @@
           z-index: 5;
           @media (max-width: $breakpoint-md) {
             -webkit-transform: none;
-            left: 1px;
-            top: calc(100% - 26px);
+            left: 24px;
+           // top: calc(100% - 26px);
           }
         }
       }

@@ -186,12 +186,16 @@
     left: 0;
     height: 100%;
     width: 100%;
+    object-fit: cover;
 
     &__wrap {
       position: relative;
       padding-bottom: 100%;
-      border-radius: 10px;
+      border-radius: 0;
       overflow: hidden;
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 8px;
+      }
     }
   }
 }

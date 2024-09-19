@@ -49,7 +49,7 @@
       -ms-flex-align: center;
       align-items: center;
 
-      font-size: 14px;
+      @include fontSize(12, 14);
       font-weight: 600;
       text-align: center;
       color: rgba(0, 0, 0, 1);
@@ -61,8 +61,24 @@
       background: $whiteColor;
       position: relative;
 
+      &:not(.next,.prev) {
+        margin: 0 4px;
+        box-shadow: 0px 0px 30px 0px rgba(60, 80, 114, 0.2);
+      }
+      @media (max-width: 600px) {
+        width: 40px;
+        height: 40px;
+        margin: 0 2px;
+      }
+      @media (max-width: 400px) {
+        width: 30px;
+        height: 30px;
+        margin: 0 2px;
+      }
+
       & i {
-        @include fontSize(12, 14);
+        @include fontSize(10, 14);
+        color: rgba(232, 16, 16, 1);
       }
 
 
@@ -77,7 +93,10 @@
       }
 
       &.next {
-        margin-left: 32px;
+        margin-left: 28px;
+        @media (max-width: 600px) {
+          margin-left: 10px;
+        }
 
         &:hover {
           & img {
@@ -87,7 +106,10 @@
       }
 
       &.prev {
-        margin-right: 32px;
+        margin-right: 28px;
+        @media (max-width: 600px) {
+          margin-right: 10px;
+        }
 
         &:hover {
           & img {

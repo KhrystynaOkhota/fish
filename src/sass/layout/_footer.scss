@@ -32,7 +32,7 @@
     padding: 50px 0 30px 0;
     background: #232323;
     @media (max-width: $breakpoint-md) {
-      padding-top: 32px;
+      padding: 32px 0 0 0;
     }
   }
 
@@ -45,12 +45,13 @@
     }
   }
 
-  .menu {
+  & .menu {
     display: flex;
     flex-wrap: wrap;
     @media (max-width: $breakpoint-md) {
       padding: 32px 0 0 0;
       position: relative;
+      margin-bottom: 32px;
       &:after {
         content: '';
         width: calc(100% + 20px);
@@ -79,10 +80,14 @@
   }
 
 
-  .contact {
+  & .contact {
     &__item {
-      & + .contact__item {
-        margin-top: 32px;
+      margin-bottom: 32px;
+
+      @media (max-width: 380px) {
+        & .contact__info + .social {
+          margin-top: 20px;
+        }
       }
 
       & > i {
@@ -90,29 +95,21 @@
         color: rgba(232, 16, 16, 1);
         padding-right: 12px;
 
-        &.icon {
-          &-phone {
-            font-size: 18px;
-          }
 
-          &-message {
-            font-size: 16px;
-          }
-
-          &-pin {
-            font-size: 23px;
-          }
-
-          &-clock {
-            font-size: 20px;
-          }
-        }
       }
     }
 
-    &__title {
+    &__info {
       @include fontSize(14, 16);
       color: #fff;
+
+      & .icon {
+        &-phone, &-mail, &-clock {
+          font-size: 24px;
+          color: rgba(232, 16, 16, 1);
+          padding-right: 12px;
+        }
+      }
 
       & span {
         font-size: 18px;
@@ -133,7 +130,7 @@
     &__title {
       @include fontSize(14, 16);
       color: #fff;
-      @media (max-width: 340px) {
+      @media (max-width: 380px) {
         margin-bottom: 20px;
       }
     }
@@ -240,6 +237,30 @@
         }
       }
     }
+  }
+
+
+  & .show-map {
+    @include fontSize(14, 16);
+    color: #fff;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 32px;
+    }
+
+    & .icon {
+      &-location {
+        @include fontSize(20, 24);
+        color: rgba(232, 16, 16, 1);
+        padding-right: 12px;
+      }
+
+      &-ar-right {
+        padding-left: 12px;
+        font-size: 16px;
+        color: rgba(255, 255, 255, 1);
+      }
+    }
+
   }
 }
 

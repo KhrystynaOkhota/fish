@@ -116,6 +116,7 @@
         </div>
     </div>
 </header>
+
 <div class="body-padding"></div>
 
 <main class="main overlap">
@@ -132,7 +133,7 @@
                             <a href="https://hope.le-target.com" itemprop="item">
                                 <span>Головна</span>
                             </a>
-                            <span class="kb_sep">/</span>
+                            <span class="kb_sep"><i class="icon-arrow-forward"></i> </span>
                         <span class="kb_title">Рецепти</span>
                         </span>
                     </div>
@@ -158,54 +159,55 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="recipes__filter">
+                        <div class="select-box">
+                            <select name="orderby" class="orderby " aria-label="Замовлення магазину" tabindex="-1">
+                                <option value="menu_order">Категорія</option>
+                                <option value="popularity">Сортувати за популярністю</option>
+                                <option value="rating">Сортувати за оцінкою</option>
+                                <option value="date">Сортувати за останніми</option>
+                                <option value="price">Сортувати за ціною: від нижчої до вищої</option>
+                                <option value="price-desc" selected="selected">Сортувати за ціною: від вищої до нижчої
+                                </option>
+                            </select>
+                            <input type="hidden" name="paged" value="1">
+                        </div>
+                        <div class="select-box">
+                            <select name="orderby" class="orderby " aria-label="Замовлення магазину" tabindex="-1">
+                                <option value="menu_order">Категорія</option>
+                                <option value="popularity">Сортувати за популярністю</option>
+                                <option value="rating">Сортувати за оцінкою</option>
+                                <option value="date">Сортувати за останніми</option>
+                                <option value="price">Сортувати за ціною: від нижчої до вищої</option>
+                                <option value="price-desc" selected="selected">Сортувати за ціною: від вищої до нижчої
+                                </option>
+                            </select>
 
-                    <div class="select-box">
-                        <select name="orderby" class="orderby " aria-label="Замовлення магазину" tabindex="-1">
-                            <option value="menu_order">Категорія</option>
-                            <option value="popularity">Сортувати за популярністю</option>
-                            <option value="rating">Сортувати за оцінкою</option>
-                            <option value="date">Сортувати за останніми</option>
-                            <option value="price">Сортувати за ціною: від нижчої до вищої</option>
-                            <option value="price-desc" selected="selected">Сортувати за ціною: від вищої до нижчої
-                            </option>
-                        </select>
-                        <input type="hidden" name="paged" value="1">
-                    </div>
-                    <div class="select-box">
-                        <select name="orderby" class="orderby " aria-label="Замовлення магазину" tabindex="-1">
-                            <option value="menu_order">Категорія</option>
-                            <option value="popularity">Сортувати за популярністю</option>
-                            <option value="rating">Сортувати за оцінкою</option>
-                            <option value="date">Сортувати за останніми</option>
-                            <option value="price">Сортувати за ціною: від нижчої до вищої</option>
-                            <option value="price-desc" selected="selected">Сортувати за ціною: від вищої до нижчої
-                            </option>
-                        </select>
-                        <input type="hidden" name="paged" value="1">
-                    </div>
-                    <div class="select-box">
-                        <select name="orderby" class="orderby " aria-label="Замовлення магазину" tabindex="-1">
-                            <option value="menu_order">Категорія</option>
-                            <option value="popularity">Сортувати за популярністю</option>
-                            <option value="rating">Сортувати за оцінкою</option>
-                            <option value="date">Сортувати за останніми</option>
-                            <option value="price">Сортувати за ціною: від нижчої до вищої</option>
-                            <option value="price-desc" selected="selected">Сортувати за ціною: від вищої до нижчої
-                            </option>
-                        </select>
-                        <input type="hidden" name="paged" value="1">
-                    </div>
-                    <div class="select-box">
-                        <select name="orderby" class="orderby " aria-label="Замовлення магазину" tabindex="-1">
-                            <option value="menu_order">Категорія</option>
-                            <option value="popularity">Сортувати за популярністю</option>
-                            <option value="rating">Сортувати за оцінкою</option>
-                            <option value="date">Сортувати за останніми</option>
-                            <option value="price">Сортувати за ціною: від нижчої до вищої</option>
-                            <option value="price-desc" selected="selected">Сортувати за ціною: від вищої до нижчої
-                            </option>
-                        </select>
-                        <input type="hidden" name="paged" value="1">
+                        </div>
+                        <div class="select-box">
+                            <select name="orderby" class="orderby " aria-label="Замовлення магазину" tabindex="-1">
+                                <option value="menu_order">Категорія</option>
+                                <option value="popularity">Сортувати за популярністю</option>
+                                <option value="rating">Сортувати за оцінкою</option>
+                                <option value="date">Сортувати за останніми</option>
+                                <option value="price">Сортувати за ціною: від нижчої до вищої</option>
+                                <option value="price-desc" selected="selected">Сортувати за ціною: від вищої до нижчої
+                                </option>
+                            </select>
+
+                        </div>
+                        <div class="select-box">
+                            <select name="orderby" class="orderby " aria-label="Замовлення магазину" tabindex="-1">
+                                <option value="menu_order">Категорія</option>
+                                <option value="popularity">Сортувати за популярністю</option>
+                                <option value="rating">Сортувати за оцінкою</option>
+                                <option value="date">Сортувати за останніми</option>
+                                <option value="price">Сортувати за ціною: від нижчої до вищої</option>
+                                <option value="price-desc" selected="selected">Сортувати за ціною: від вищої до нижчої
+                                </option>
+                            </select>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -225,7 +227,7 @@
                             </div>
                             <div class="line"></div>
                             <a href="recipes-inner.html" class="btn-more text-medium">Читати повністю<i
-                                    class="icon-ar-left"></i></a>
+                                    class="icon-ar-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -244,7 +246,7 @@
                             </div>
                             <div class="line"></div>
                             <a href="recipes-inner.html" class="btn-more text-medium">Читати повністю<i
-                                    class="icon-ar-left"></i></a>
+                                    class="icon-ar-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -263,7 +265,7 @@
                             </div>
                             <div class="line"></div>
                             <a href="recipes-inner.html" class="btn-more text-medium">Читати повністю<i
-                                    class="icon-ar-left"></i></a>
+                                    class="icon-ar-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -282,7 +284,7 @@
                             </div>
                             <div class="line"></div>
                             <a href="recipes-inner.html" class="btn-more text-medium">Читати повністю<i
-                                    class="icon-ar-left"></i></a>
+                                    class="icon-ar-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -294,7 +296,7 @@
                     <nav class="navigation pagination">
                         <div class="nav-links d-flex">
                             <a class="prev page-numbers">
-                                <img src="assets/img/pagination-left.svg" alt="arrow left">
+                                <i class="icon-ar-left"></i>
                             </a>
                             <a class="page-numbers">1</a>
                             <span class="page-numbers current">2</span>
@@ -302,7 +304,7 @@
                             <span class="page-numbers dots">…</span>
                             <a class="page-numbers">7</a>
                             <a class="next page-numbers">
-                                <img src="assets/img/pagination-right.svg" alt="arrow right">
+                                <i class="icon-ar-right"></i>
                             </a>
                         </div>
                     </nav>
@@ -328,7 +330,7 @@
                                 <input type="email" value="" name="email" class="subscription__input "
                                        placeholder="Ваша пошта">
                                 <button class="subscription__btn btn  d-flex align-center align-middle" type="submit"><i
-                                        class="icon-ar-left"></i>
+                                        class="icon-ar-right"></i>
                                 </button>
                             </div>
 
@@ -367,45 +369,45 @@
 
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12  footer-item --relative column">
 
-                    <ul>
-                        <li class="contact__item d-flex align-justify align-middle">
-                            <a href="tel:+380678473628" class="contact__title text-medium"> <i class="icon-phone"></i>+38(067)-847-36-28</a>
-                            <ul class="social d-flex ">
-                                <li class="social__item">
-                                    <a href="#" target="_self" class="d-flex align-center align-middle">
-                                        <i class="icon-viber"></i>
-                                    </a>
-                                </li>
-                                <li class="social__item">
-                                    <a href="#" target="_self" class="d-flex align-center align-middle">
-                                        <i class="icon-facebook"></i>
-                                    </a>
-                                </li>
-                                <li class="social__item">
-                                    <a href="#" target="_self" class="d-flex align-center align-middle">
-                                        <i class="icon-instagram"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="contact__item">
-                            <a href="mailto:info@rybnuy-kombinat.com" class="contact__title text-medium"> <i
-                                    class="icon-message"></i>info@rybnuy-kombinat.com</a>
+
+                    <div class="contact__item">
+                        <a href="mailto:info@rybnuy-kombinat.com" class="contact__info text-medium d-flex align-middle">
+                            <i class="icon-mail"></i>info@rybnuy-kombinat.com
+                        </a>
+                    </div>
+                    <a href="" class="show-map text-medium text-uppercase d-flex d-md-none align-middle">
+                        <i class="icon-location"></i>Подивитись на  карті<i class="icon-ar-right"></i>
+                    </a>
+                    <div class="contact__item d-flex align-justify align-middle">
+                        <a href="tel:+380678473628" class="contact__info text-medium d-flex align-middle"> <i class="icon-phone"></i><b>+38(067)-847-36-28</b></a>
+                        <ul class="social d-flex ">
+                            <li class="social__item">
+                                <a href="#" target="_self" class="d-flex align-center align-middle">
+                                    <i class="icon-viber"></i>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="#" target="_self" class="d-flex align-center align-middle">
+                                    <i class="icon-telegram"></i>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="#" target="_self" class="d-flex align-center align-middle">
+                                    <i class="icon-whatsapp"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
 
-                        </li>
-                        <li class="contact__item">
-                            <a href="" class="contact__title text-medium"> <i class="icon-location"></i>Подивитись на
-                                карті <i class="icon-ar-left"></i> </a>
-                        </li>
-                    </ul>
+
 
                     <div class="social__wrap d-flex align-justify align-middle">
                         <div class="social__title text-light">Ми в соц мережах:</div>
                         <ul class="social d-flex ">
                             <li class="social__item">
                                 <a href="#" target="_self" class="d-flex align-center align-middle">
-                                    <i class="icon-viber"></i>
+                                    <i class="icon-youtube"></i>
                                 </a>
                             </li>
                             <li class="social__item">
@@ -420,11 +422,11 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="contact__item">
 
-                        <a href="" class="contact__title text-medium"><i class="icon-location"></i>Подивитись на карті
-                            <i class="icon-ar-left"></i> </a>
-                    </div>
+                    <a href="" class="show-map text-medium text-uppercase d-none d-md-flex align-middle"><i class="icon-location"></i>Подивитись на
+                        карті
+                        <i class="icon-ar-right"></i> </a>
+
                 </div>
             </div>
         </div>
@@ -454,114 +456,11 @@
     </div>
 </footer>
 
-
 <script src="./assets/js/jquery-3.7.0.min.js"></script>
 <script src="assets/js/swiper-bundle.min.js"></script>
 <script src="assets/js/js_app.min.js"></script>
 <script src="assets/js/jquery.sumoselect.min.js"></script>
 <script src="assets/js/sumoselectCustom.js"></script>
 
-<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key="
-        type="text/javascript"></script>
-<script async defer>
-
-    function initializeMap() {
-        var element = document.getElementById('map');
-        var options = {
-            zoom: 15,
-            center: {lat: 50.462977825823856, lng: 30.49312623977225},
-            styles: [{"elementType": "geometry", "stylers": [{"color": "#f5f5f5"}]}, {
-                "elementType": "labels.icon",
-                "stylers": [{"visibility": "off"}]
-            }, {
-                "elementType": "labels.text.fill",
-                "stylers": [{"color": "#616161"}]
-            }, {
-                "elementType": "labels.text.stroke",
-                "stylers": [{"color": "#f5f5f5"}]
-            }, {
-                "featureType": "administrative.land_parcel",
-                "elementType": "labels.text.fill",
-                "stylers": [{"color": "#bdbdbd"}]
-            }, {
-                "featureType": "poi",
-                "elementType": "geometry",
-                "stylers": [{"color": "#eeeeee"}]
-            }, {
-                "featureType": "poi",
-                "elementType": "labels.text.fill",
-                "stylers": [{"color": "#757575"}]
-            }, {
-                "featureType": "poi.park",
-                "elementType": "geometry",
-                "stylers": [{"color": "#e5e5e5"}]
-            }, {
-                "featureType": "poi.park",
-                "elementType": "labels.text.fill",
-                "stylers": [{"color": "#9e9e9e"}]
-            }, {
-                "featureType": "road",
-                "elementType": "geometry",
-                "stylers": [{"color": "#ffffff"}]
-            }, {
-                "featureType": "road.arterial",
-                "elementType": "labels.text.fill",
-                "stylers": [{"color": "#757575"}]
-            }, {
-                "featureType": "road.highway",
-                "elementType": "geometry",
-                "stylers": [{"color": "#dadada"}]
-            }, {
-                "featureType": "road.highway",
-                "elementType": "labels.text.fill",
-                "stylers": [{"color": "#616161"}]
-            }, {
-                "featureType": "road.local",
-                "elementType": "labels.text.fill",
-                "stylers": [{"color": "#9e9e9e"}]
-            }, {
-                "featureType": "transit.line",
-                "elementType": "geometry",
-                "stylers": [{"color": "#e5e5e5"}]
-            }, {
-                "featureType": "transit.station",
-                "elementType": "geometry",
-                "stylers": [{"color": "#eeeeee"}]
-            }, {
-                "featureType": "water",
-                "elementType": "geometry",
-                "stylers": [{"color": "#c9c9c9"}]
-            }, {"featureType": "water", "elementType": "labels.text.fill", "stylers": [{"color": "#9e9e9e"}]}]
-        };
-        var myMap = new google.maps.Map(element, options);
-        var markers = [{
-            coordinates: {lat: 50.462977825823856, lng: 30.49312623977225},
-            image: "assets/img/placeholder.svg",
-            info: "<div class='map-info'>м.Київ, вул. Глибочицька, 23</div>"
-        },];
-
-        function addMarker(properties) {
-            var marker = new google.maps.Marker({position: properties.coordinates, map: myMap, icon: properties.image});
-            if (properties.image) {
-                marker.setIcon(properties.image);
-            }
-            if (properties.info) {
-                marker.addListener('click', function () {
-                    InfoWindow.open(myMap, marker);
-                });
-                var InfoWindow = new google.maps.InfoWindow({content: properties.info});
-            }
-        }
-
-        for (var i = 0; i < markers.length; i++) {
-            addMarker(markers[i]);
-        }
-    }
-
-
-    $(window).on('load', function () {
-        initializeMap();
-    });
-</script>
 </body>
 </html>

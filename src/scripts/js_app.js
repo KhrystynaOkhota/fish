@@ -264,3 +264,48 @@ $('.preload__btn').on('click', function () {
         $(this).parents(".preload-entry").find('.--pause').removeClass("d-none").addClass("d-block");
     }
 });
+
+
+// =============================
+// ACCORDEON
+// =============================
+$(document).on('click', '.accordeon-title', function () {
+    $(this).parent().siblings('.accordeon-item.active').toggleClass('active').find('.accordeon-content').slideToggle();
+    $(this).parent().toggleClass('active').find('.accordeon-content').slideToggle();
+});
+
+
+// =============================
+// UPLOAD FILE
+// =============================
+
+$('body').on('change', '.up-file', function() {
+    var format = $(this).val();
+    var fileName = format.substring(format.lastIndexOf("\\") + 1);
+    if (format == '') {
+        $('.file-name').text($('.file-name').data('placeholder-text'));
+    } else {
+        $('.file-name').text(fileName);
+    }
+});
+
+// =============================
+// SIDEBAR MOBILE
+// =============================
+var sidebarClose = $('.sidebar-filters').attr('data-close'),
+    sidebarFilters = $('.sidebar-filters').find('img').attr('src');
+
+$('.sidebar-filters').on('click', function () {
+    $(this).toggleClass('active');
+    $('.sidebar').toggleClass('active');
+    if ($(this).hasClass('active')) {
+        $(this).find('i').removeClass('icon-arrow-forward').addClass('icon-pin');
+    } else {
+        $(this).find('img').attr('src', sidebarFilters);
+    }
+    _functions.removeScroll();
+
+    if (!$(this).hasClass('active')) {
+        _functions.addScroll();
+    }
+});
