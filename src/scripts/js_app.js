@@ -97,8 +97,12 @@ jQuery(function ($) {
 
 
     $('.swiper-thumbs').each(function () {
-        var top = $(this).find('.swiper-container.swiper-top')[0].swiper,
+        var top = $(this).find('.swiper-container.swiper-top')[0].swiper, bottom;
+        if ($(window).width() < 768) {
+            bottom = $(this).find('.swiper-container.swiper-bottom2')[0].swiper;
+        }else {
             bottom = $(this).find('.swiper-container.swiper-bottom')[0].swiper;
+        }
         top.thumbs.swiper = bottom;
         top.thumbs.init();
         top.thumbs.update();
@@ -279,13 +283,13 @@ $(document).on('click', '.accordeon-title', function () {
 // UPLOAD FILE
 // =============================
 
-$('body').on('change', '.up-file', function() {
+$('body').on('change', '.upload-file', function() {
     var format = $(this).val();
     var fileName = format.substring(format.lastIndexOf("\\") + 1);
     if (format == '') {
-        $('.file-name').text($('.file-name').data('placeholder-text'));
+        $('.upload-file__name').text($('.upload-file__name').data('placeholder-text'));
     } else {
-        $('.file-name').text(fileName);
+        $('.upload-file__name').text(fileName);
     }
 });
 

@@ -141,7 +141,12 @@
       grid-template-columns: 1fr 1fr 1fr;
       display: grid;
       gap: 20px;
+
       @media (max-width: $breakpoint-md) {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+      }
+      @media (max-width: $breakpoint-sm) {
         grid-template-columns: 1fr;
         gap: 15px;
       }
@@ -190,6 +195,13 @@
         padding-bottom: 100%;
       }
     }
+  }
+
+  .sidebar-filters {
+    @media (min-width: $breakpoint-md) {
+      display: none;
+    }
+
   }
 
 
@@ -336,8 +348,8 @@
       position: fixed;
       top: 85px;
       left: 0;
-      width: 320px;
-      height: calc(100% - 85px);
+      width: 100%;
+      height: calc(100vh - 85px);
       z-index: 120;
       -webkit-transition: .6s cubic-bezier(1, 0, 0, 1);
       transition: .6s cubic-bezier(1, 0, 0, 1);
@@ -380,7 +392,7 @@
 
     .filter-wrap {
       top: 68px;
-      height: calc(100% - 68px);
+      height: calc(100vh - 68px);
       width: calc(100% - 60px)
     }
 
@@ -406,7 +418,7 @@
 .s-product-card {
   padding-top: 32px;
 
-  .kama_breadcrumbs {
+  & .kama_breadcrumbs {
     & a {
       color: #1B1B1B;
     }
@@ -452,7 +464,7 @@
 
     &-card {
       &__inner {
-        padding-bottom: 176px;
+        padding-bottom: 60px;
         @media (max-width: $breakpoint-md) {
           padding-bottom: 0;
         }
@@ -471,13 +483,7 @@
     margin-top: 45px;
 
     & .swiper-bottom {
-      position: absolute;
-      left: calc(100% + 10px);
-      height: auto;
 
-      & .swiper-wrapper {
-        width: calc(100% - 120px);
-      }
     }
   }
 
@@ -496,6 +502,54 @@
       @media (max-width: $breakpoint-md) {
         margin: 10px 0 32px 0;
 
+      }
+    }
+  }
+
+
+  & .product-img {
+    padding-bottom: 100%;
+    position: relative;
+
+    & img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &-small {
+      padding-bottom: 100%;
+      position: relative;
+
+      & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .swiper-entry {
+    &__bottom {
+      @media (max-width: $breakpoint-md) {
+        margin: 8px 0 32px 0;
+      }
+
+      & .swiper-container {
+        width: calc(100% - 120px);
+        margin: 0 auto;
+      }
+
+      .swiper-button-next, .swiper-button-prev {
+        @media (max-width: $breakpoint-md) {
+          display: none;
+        }
       }
     }
   }
