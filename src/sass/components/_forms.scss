@@ -268,7 +268,12 @@ select:-webkit-autofill:focus {
 .application-form {
   padding: 32px;
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.12);
-
+  @media (max-width: $breakpoint-md) {
+    padding: 20px;
+  }
+  @media (max-width: $breakpoint-sm) {
+    padding: 16px;
+  }
   & .heading {
     @include fontSize(24, 32);
     margin-bottom: 24px;
@@ -321,7 +326,12 @@ select:-webkit-autofill:focus {
       height: 100%;
       width: 55%;
       z-index: -1;
-
+      @media (max-width: $breakpoint-md) {
+      top: auto;
+      bottom: 0;
+      height: 70%;
+      width: 100%;
+    }
       &:after {
         content: "";
         width: 100%;
@@ -330,6 +340,9 @@ select:-webkit-autofill:focus {
         position: absolute;
         top: 0;
         left: 0;
+        @media (max-width: $breakpoint-md) {
+          background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+        }
       }
     }
   }

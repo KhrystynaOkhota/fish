@@ -159,52 +159,48 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="recipes__filter">
-                        <div class="select-box">
-                            <select name="orderby" class="orderby " aria-label="Замовлення магазину" tabindex="-1">
-                                <option value="menu_order">Категорія</option>
-                                <option value="popularity">Сортувати за популярністю</option>
-                                <option value="rating">Сортувати за оцінкою</option>
-                                <option value="date">Сортувати за останніми</option>
-                                <option value="price">Сортувати за ціною: від нижчої до вищої</option>
-                                <option value="price-desc" selected="selected">Сортувати за ціною: від вищої до нижчої
-                                </option>
-                            </select>
-                            <input type="hidden" name="paged" value="1">
-                        </div>
-                        <div class="select-box">
-                            <select name="orderby" class="orderby " aria-label="Замовлення магазину" tabindex="-1">
-                                <option value="menu_order">Категорія</option>
-                                <option value="popularity">Сортувати за популярністю</option>
-                                <option value="rating">Сортувати за оцінкою</option>
-                                <option value="date">Сортувати за останніми</option>
-                                <option value="price">Сортувати за ціною: від нижчої до вищої</option>
-                                <option value="price-desc" selected="selected">Сортувати за ціною: від вищої до нижчої
-                                </option>
-                            </select>
+                    <div class="recipes__filter d-flex align-middle align-justify">
+                        <div class="d-flex align-left align-middle">
+                            <div class="select-box">
+                                <select class="orderby">
+                                    <option value="category1">Категорія</option>
+                                    <option value="category2">Закуски</option>
+                                    <option value="category3">Салати</option>
+                                    <option value="category4">Супи</option>
+                                    <option value="category5">Гарячі страви</option>
+                                    <option value="category6">Дитяче меню</option>
+                                    <option value="category6">Святкове меню</option>
+                                </select>
+                                <input type="hidden" name="paged" value="1">
+                            </div>
+                            <div class="select-box">
+                                <select class="orderby">
+                                    <option value="time">Час приготування</option>
+                                    <option value="time2">20хв</option>
+                                    <option value="time3">60хв</option>
+                                    <option value="time4">120хв</option>
+                                    <option value="time5">2 год</option>
+                                    <option value="time6">40хв</option>
+                                </select>
 
-                        </div>
-                        <div class="select-box">
-                            <select name="orderby" class="orderby " aria-label="Замовлення магазину" tabindex="-1">
-                                <option value="menu_order">Категорія</option>
-                                <option value="popularity">Сортувати за популярністю</option>
-                                <option value="rating">Сортувати за оцінкою</option>
-                                <option value="date">Сортувати за останніми</option>
-                                <option value="price">Сортувати за ціною: від нижчої до вищої</option>
-                                <option value="price-desc" selected="selected">Сортувати за ціною: від вищої до нижчої
-                                </option>
-                            </select>
+                            </div>
+                            <div class="select-box">
+                                <select class="orderby">
+                                    <option value="ingredients">Інгредієнти</option>
+                                    <option value="ingredients2">Борошно</option>
+                                    <option value="ingredients3">Риба</option>
+                                    <option value="ingredients4">Інгредієнти2</option>
+                                    <option value="ingredients5">Інгредієнти3</option>
+                                    <option value="ingredients6">Інгредієнти4</option>
+                                </select>
 
+                            </div>
                         </div>
                         <div class="select-box">
-                            <select name="orderby" class="orderby " aria-label="Замовлення магазину" tabindex="-1">
-                                <option value="menu_order">Категорія</option>
-                                <option value="popularity">Сортувати за популярністю</option>
-                                <option value="rating">Сортувати за оцінкою</option>
-                                <option value="date">Сортувати за останніми</option>
-                                <option value="price">Сортувати за ціною: від нижчої до вищої</option>
-                                <option value="price-desc" selected="selected">Сортувати за ціною: від вищої до нижчої
-                                </option>
+                            <select class="orderby">
+                                <option value="sort">Сортувати</option>
+                                <option value="sort2">Спочатку нові</option>
+                                <option value="sort3">тест</option>
                             </select>
 
                         </div>
@@ -376,10 +372,11 @@
                         </a>
                     </div>
                     <a href="" class="show-map text-medium text-uppercase d-flex d-md-none align-middle">
-                        <i class="icon-location"></i>Подивитись на  карті<i class="icon-ar-right"></i>
+                        <i class="icon-location"></i>Подивитись на карті<i class="icon-ar-right"></i>
                     </a>
                     <div class="contact__item d-flex align-justify align-middle">
-                        <a href="tel:+380678473628" class="contact__info text-medium d-flex align-middle"> <i class="icon-phone"></i><b>+38(067)-847-36-28</b></a>
+                        <a href="tel:+380678473628" class="contact__info text-medium d-flex align-middle"> <i
+                                class="icon-phone"></i><b>+38(067)-847-36-28</b></a>
                         <ul class="social d-flex ">
                             <li class="social__item">
                                 <a href="#" target="_self" class="d-flex align-center align-middle">
@@ -398,8 +395,6 @@
                             </li>
                         </ul>
                     </div>
-
-
 
 
                     <div class="social__wrap d-flex align-justify align-middle">
@@ -423,7 +418,8 @@
                         </ul>
                     </div>
 
-                    <a href="" class="show-map text-medium text-uppercase d-none d-md-flex align-middle"><i class="icon-location"></i>Подивитись на
+                    <a href="" class="show-map text-medium text-uppercase d-none d-md-flex align-middle"><i
+                            class="icon-location"></i>Подивитись на
                         карті
                         <i class="icon-ar-right"></i> </a>
 

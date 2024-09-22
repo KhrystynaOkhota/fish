@@ -342,9 +342,10 @@
     &-slide-thumb-active {
 
 
-      & + .swiper-slide{
+      & + .swiper-slide {
 
       }
+
       .history {
         &__year {
           color: rgba(232, 16, 16, 1);
@@ -526,13 +527,22 @@
     grid-template-columns: 64px 1fr;
     gap: 20px;
     width: calc(100% - 64px);
+    @media (max-width: $breakpoint-md) {
+      width: calc(100% - 56px);
+      display: block;
+    }
 
     & span {
+      display: block;
       font-weight: 500;
       @include fontSize(16, 24);
       line-height: 1.4;
       color: #000;
       width: calc(100% - 64px);
+      @media (max-width: $breakpoint-md) {
+        width: 100%;
+
+      }
     }
 
     & .img {
@@ -553,7 +563,9 @@
     padding: 32px 0;
     position: relative;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
-
+    @media (max-width: $breakpoint-md) {
+      padding: 24px 0 16px 0;
+    }
 
     &__item {
       &:not(&:last-child) {

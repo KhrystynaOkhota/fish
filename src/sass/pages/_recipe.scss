@@ -88,6 +88,9 @@
     box-shadow: 0px 0px 30px 0px rgba(60, 80, 114, 0.2);
     margin-bottom: 24px;
     padding: 40px;
+    @media (max-width: $breakpoint-md) {
+      padding: 0;
+    }
   }
 
   & .pagination {
@@ -119,6 +122,10 @@
   & .heading {
     @include fontSize(28, 45);
     width: calc(100% - 132px);
+    @media (max-width: 380px) {
+      font-size: 20px;
+      width: calc(100% - 92px);
+    }
   }
 
   & .decor {
@@ -284,5 +291,70 @@
         margin-bottom: 16px;
       }
     }
+  }
+}
+
+
+.select-box select {
+  opacity: 0;
+}
+
+.SumoSelect {
+  width: auto;
+  max-width: 250px;
+}
+
+.SumoSelect.open > .optWrapper {
+  background: rgba(244, 244, 244, 1);
+}
+
+.SumoSelect > .optWrapper {
+  border-radius: 0;
+  max-width: 210px;
+}
+
+.SumoSelect > .optWrapper > .options > li.opt:first-child {
+  border-radius: 0;
+}
+
+.SumoSelect > .optWrapper > .options {
+  border-radius: 0;
+  padding: 24px;
+  max-height: max-content;
+}
+
+.SumoSelect > .optWrapper > .options li.opt {
+  padding: 0;
+
+  &:not(&:last-child) {
+    margin-bottom: 24px;
+  }
+}
+
+.SumoSelect > .optWrapper > .options li.opt:hover {
+  background-color: transparent;
+}
+
+.SumoSelect > .CaptionCont {
+  position: relative;
+  border: none;
+  min-height: 14px;
+  background-color: #fff;
+  border-radius: 0;
+  margin: 0;
+}
+
+.SumoSelect.open>.CaptionCont, .SumoSelect:focus>.CaptionCont, .SumoSelect:hover>.CaptionCont {
+  box-shadow: none;
+  border-color: transparent;
+  cursor: pointer;
+}
+.SumoSelect>.CaptionCont>span{
+  cursor: pointer;
+}
+
+.select-box{
+  &:not(&:last-child){
+    margin-right:40px;
   }
 }
