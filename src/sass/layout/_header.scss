@@ -226,8 +226,11 @@
             &:after {
               content: '';
               width: 0;
-              height: 1px;
-              background-color: #000;
+              height: 6px;
+              background: rgba(15, 14, 104, 1);
+              border-radius: 100px 100px 0px 0px;
+
+
               position: absolute;
               bottom: 0;
               left: 50%;
@@ -241,7 +244,7 @@
           & > a {
             @media (min-width: $breakpoint-lg) {
               &:after {
-                width: 40px;
+                width: 45px;
                 @include transition(.5);
               }
             }
