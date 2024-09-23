@@ -4,7 +4,9 @@
 
 .s-directions {
   margin-bottom: 140px;
-
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 100px;
+  }
   &.bg {
     margin: 36px 0 140px 0;
     @media (max-width: $breakpoint-md) {
