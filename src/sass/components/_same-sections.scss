@@ -95,6 +95,9 @@
 
   &.home {
     margin-bottom: 140px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 100px;
+    }
 
     .preload {
       &__wrap {
@@ -102,7 +105,7 @@
         max-height: calc(40vh - 152px);
         @media (max-width: $breakpoint-md) {
           padding-bottom: 100%;
-          max-height:300px;
+          max-height: 300px;
         }
       }
     }
