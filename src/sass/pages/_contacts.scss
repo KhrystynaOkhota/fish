@@ -7,6 +7,7 @@
   @media (max-width: $breakpoint-md) {
     padding: 100px 0;
   }
+
   &__inner {
     @media (min-width: $breakpoint-md) {
       flex-direction: row-reverse;
@@ -22,9 +23,9 @@
 
     &--wrap {
       position: relative;
-      padding-bottom: 62%;
-      background: radial-gradient(50% 50% at 50% 50%, #D9D9D9 54.5%, rgba(217, 217, 217, 0) 100%);
-      background: radial-gradient(circle, rgba(217, 217, 217, 1) 54%, rgba(217, 217, 217, 1) 100%);
+      padding-bottom: 70%;
+
+
     }
   }
 

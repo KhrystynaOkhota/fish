@@ -100,7 +100,7 @@ jQuery(function ($) {
         var top = $(this).find('.swiper-container.swiper-top')[0].swiper, bottom;
         if ($(window).width() < 768) {
             bottom = $(this).find('.swiper-container.swiper-bottom2')[0].swiper;
-        }else {
+        } else {
             bottom = $(this).find('.swiper-container.swiper-bottom')[0].swiper;
         }
         top.thumbs.swiper = bottom;
@@ -283,7 +283,7 @@ $(document).on('click', '.accordeon-title', function () {
 // UPLOAD FILE
 // =============================
 
-$('body').on('change', '.upload-file', function() {
+$('body').on('change', '.upload-file', function () {
     var format = $(this).val();
     var fileName = format.substring(format.lastIndexOf("\\") + 1);
     if (format == '') {
@@ -302,14 +302,20 @@ var sidebarClose = $('.sidebar-filters').attr('data-close'),
 $('.sidebar-filters').on('click', function () {
     $(this).toggleClass('active');
     $('.sidebar').toggleClass('active');
+
     if ($(this).hasClass('active')) {
-        $(this).find('i').removeClass('icon-arrow-forward').addClass('icon-pin');
+        $(this).find('img').attr('src', sidebarClose);
     } else {
         $(this).find('img').attr('src', sidebarFilters);
     }
-    _functions.removeScroll();
+    /* if ($(this).hasClass('active')) {
+         $(this).find('i').removeClass('icon-arrow-forward').addClass('icon-pin');
+     } else {
+         $(this).find('img').attr('src', sidebarFilters);
+     }*/
+   /* _functions.removeScroll();
 
     if (!$(this).hasClass('active')) {
         _functions.addScroll();
-    }
+    }*/
 });
