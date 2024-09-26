@@ -17,6 +17,20 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: max-content;
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+    }
+
+    &__icon {
+      position: absolute;
+      right: 55px;
+      top: -45px;
+      width: 38px;
+      height: 56px;
+      z-index: 3;
+      object-fit: contain;
+
+    }
 
     &__location {
       margin-bottom: 32px;
@@ -58,6 +72,9 @@
     left: 0;
     width: 100%;
     height: 100%;
+    @media (max-width: $breakpoint-md) {
+      min-height: 500px;
+    }
 
     &--wrap {
       position: relative;
